@@ -5,7 +5,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Header() {
   return (
-    <Navbar>
+    <Navbar className="max-w-7xl mx-auto p-1">
       <Link to="/" className="self-center whitespace-nowrap">
         <img src={Logo} className="w-44" alt="AE Blogsite" />
       </Link>
