@@ -1,2 +1,1 @@
-Newspaper App with ReactJs
-
+AE Blogsite with MERN Programing
