@@ -1,58 +1,51 @@
 import { Button } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../images/logo-fin3.png";
+
 export default function SignIn() {
   return (
-    <div className="max-w-7xl mx-auto p-4 flex flex-col sm:flex-row">
-      <div className="flex-1  flex items-center">
-        <div className="flex flex-col justify-center ">
-          <h1 className="font-bold text-6xl">AE</h1>
-          <span className="text-[#E02424] font-semibold text-5xl">
-            BLOGSITE
-          </span>
-        </div>
-      </div>
-      <div className="flex-1 ">
-        <div className="max-w-2xl mx-auto pt-24 p-3 ">
-          <h1 className="text-left text-3xl font-semibold my-7 text-white ">
-            Sign In
-          </h1>
-          <form className="flex flex-col gap-4">
-            <input
-              type="email"
-              id="email"
-              placeholder="email"
-              className="border p-2 pl-4 rounded-3xl focus:outline-none text-black"
-              // onChange={handleChange}
-            />
-            <input
-              type="password"
-              id="password"
-              placeholder="password"
-              className="border p-2 pl-4 rounded-3xl focus:outline-none text-black"
-              // onChange={handleChange}
-            />
+    <header className="flex items-center justify-center h-[100vh]">
+      <div className="max-w-lg w-full p-5 rounded-md shadow-2xl sm:p-5 bg-slate-900 bg-opacity-80">
+        <h1 className="text-center text-3xl font-semibold my-7 text-white">
+          Sign In
+        </h1>
+        <form className="flex flex-col gap-3">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            className="border p-2 pl-4 rounded-3xl focus:outline-none text-black text-md"
+            // onChange={handleChange}
+          />
 
-            <Link to="/sign-in" className="">
-              <Button size="md" color="failure" pill className="w-full">
-                <button
-                  type="submit"
-                  // disabled={loading}
-                  className="">
-                  Sign In
-                </button>
-              </Button>
-            </Link>
-          </form>
-          <div className="flex gap-2 my-4">
-            <p>Don't have an account?</p>
-            <Link to="/sign-up">
-              <span className="font-semibold text-[#E02424]">Sign Up</span>
-            </Link>
-          </div>
-          {/* {error && <p className="text-red-500">{error}</p>} */}
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            className="border p-2 pl-4 rounded-3xl focus:outline-none text-black text-md"
+            // onChange={handleChange}
+          />
+
+          <Link to="/sign-in" className="">
+            <Button size="md" color="failure" pill className="w-full">
+              <button
+                type="submit"
+                // disabled={loading}
+                className="">
+                Sign In
+              </button>
+            </Button>
+          </Link>
+        </form>
+        <div className="flex gap-2 my-4">
+          <p>Don't have an account?</p>
+          <Link to="/sign-up">
+            <span className="font-medium text-[#E02424]">Register</span>
+          </Link>
         </div>
+        {/* {error && <p className="text-red-500">{error}</p>} */}
       </div>
-    </div>
+    </header>
   );
 }
