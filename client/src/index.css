@@ -7,13 +7,30 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #1f2937;
+  /* background-color: #1f2937; */
   color: white;
   min-height: 100vh;
 }
 
-header {
+.pagebg {
   background-image: url("./images/pg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+}
+.signup_layout {
+  background-image: url("./images/pg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+}
+
+.header {
+  height: 15vh;
 }

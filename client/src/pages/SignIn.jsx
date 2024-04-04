@@ -1,12 +1,13 @@
-import { Button } from "flowbite-react";
+import { Button, TextInput } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/logo-fin3.png";
 
 export default function SignIn() {
   return (
-    <header className="flex items-center justify-center h-[100vh]">
-      <div className="max-w-lg w-full p-5 rounded-md shadow-2xl sm:p-5 bg-slate-900 bg-opacity-80">
+    <div className="flex items-center justify-center h-[85vh]">
+      <div className="pagebg"></div>
+      <div className="max-w-lg w-full p-2 rounded-md shadow-2xl sm:p-5 bg-slate-900 bg-opacity-80">
         <h1 className="text-center text-3xl font-semibold my-7 text-white">
           Sign In
         </h1>
@@ -15,6 +16,7 @@ export default function SignIn() {
             type="text"
             id="username"
             placeholder="Username"
+            size="md"
             className="border p-2 pl-4 rounded-3xl focus:outline-none text-black text-md"
             // onChange={handleChange}
           />
@@ -23,7 +25,7 @@ export default function SignIn() {
             type="password"
             id="password"
             placeholder="Password"
-            className="border p-2 pl-4 rounded-3xl focus:outline-none text-black text-md"
+            className="p-2 pl-4 rounded-3xl focus:outline-none text-black text-md"
             // onChange={handleChange}
           />
 
@@ -46,6 +48,6 @@ export default function SignIn() {
         </div>
         {/* {error && <p className="text-red-500">{error}</p>} */}
       </div>
-    </header>
+    </div>
   );
 }
