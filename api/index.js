@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const UserRoute = require("./routes/user.route.js");
+const authRoute = require("./routes/auth.route.js");
+
 require("./config/db.js");
 const app = express();
 
@@ -13,6 +15,6 @@ app.listen(3000, () => {
 });
 
 app.use("/api/user", UserRoute);
-app.use("/auth/user", UserRoute);
+app.use("/api/auth", authRoute);
 
 module.exports = app;
